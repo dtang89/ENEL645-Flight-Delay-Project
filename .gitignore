@@ -1,0 +1,4 @@
+# Don't track these folders
+.ipynb_checkpoints/
+logs/
+
