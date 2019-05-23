@@ -1,0 +1,8 @@
+.usaMap{
+    fill: lightgray;
+    stroke: white;
+}
+
+.usaMap:hover{
+    fill: rgb(255, 220, 149);
+}
