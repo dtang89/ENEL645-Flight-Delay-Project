@@ -1,14 +1,13 @@
 const 
-    width = 1000,
-		height = 600,
-		USATOPO = './lib/us-10m.v1.json',
-		svg = d3.select('#map')
-			.append('svg')
-			.attr('width', width)
-			.attr('height', height);
+	width = 1000,
+	height = 600,
+	USATOPO = './lib/us-10m.v1.json',
+	svg = d3.select('#map')
+		.append('svg')
+		.attr('width', width)
+		.attr('height', height);
 
-var usaMap = svg
-	.append('g');
+var usaMap = svg.append('g');
 
 d3.json(USATOPO)
 	.then(usa => {
