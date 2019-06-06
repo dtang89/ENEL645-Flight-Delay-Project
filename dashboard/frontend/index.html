@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<html>
+	<header>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+		<script src="{{ url_for('static', filename='lib/d3.v5.min.js') }}"></script>
+		<script src="{{ url_for('static', filename='lib/topojson.v2.min.js') }}"></script>
+	</header>
+	<body>
+		<div id="map"></div>
+		<div id="date-slider"></div>
+		<div id="table-data"></div>
+		
+	</body>
+	<footer>
+		<script src="{{ url_for('static', filename='js/map.js') }}"></script>
+	</footer>
+</html>
