@@ -3,7 +3,6 @@ data_processing/r1AllFlights.csv
 data_processing/.ipy
 .*/
 dashboard/frontend/*.csv
-# Don't track these folders
 .ipynb_checkpoints/
 logs/
-
+*.csv
