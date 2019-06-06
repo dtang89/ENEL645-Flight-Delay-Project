@@ -6,3 +6,4 @@ dashboard/frontend/*.csv
 .ipynb_checkpoints/
 logs/
 *.csv
+__pycache__
