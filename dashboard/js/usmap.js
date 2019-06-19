@@ -133,8 +133,11 @@ class Usmap{
         updateLine(d, projection, airportsmap);
         updateInfo(d);
         updateSummary(d);
-        let audio = new Audio('./audio/top-gun-quote.mp3');
-        audio.play();
+        let checkbox = document.getElementById('checkboxTomCruise');
+        if (checkbox.checked){
+          let audio = new Audio('./audio/top-gun-quote.mp3');
+          audio.play();
+        }
       });
   }
 
@@ -249,46 +252,42 @@ class Usmap{
           })
           .attr("class", "route");
           
-          d3.select('#usmap').append('g')
-            .attr('id', 'tomCruise-img')
-            .selectAll('#tomCruise')
-            .data(airportconnection)
-            .enter()
-            .append('svg:image')
-              .attr('id', 'tomCruise')
-              .attr('x', projection([d.lon, d.lat])[0] - 25)
-              .attr('y', projection([d.lon, d.lat])[1] - 25)
-              .style('opacity', 1)
-              .style('pointer-events', 'none')
-              .attr('width', 50)
-              .attr('height', 50)
-              .attr('xlink:href', 'https://pixel.nymag.com/imgs/daily/vulture/2017/06/14/14-tom-cruise.w700.h700.jpg')
-              .transition()
-              .duration(1000)
-              .delay((d,i) =>(i-1)*25)
-              .attr("x", function (a) {
-                let dest = airportsmap[a.Dest];
-                let end = dest == null ? projection([d.lon, d.lat])[0] : dest[0]
-                return end - 25;
-              })
-              .attr("y", function (a) {
-                let dest = airportsmap[a.Dest];
-                let end =  dest == null ? projection([d.lon, d.lat])[1] : dest[1]
-                return end - 25;
-              })
-              .transition()
-              .duration(100)
-              .delay(100)
-              .style('opacity', 0);
-        });
-      
-      
-    
 
-    // d3.select("#force").selectAll("line")
-    //   .classed("forcelinkclicked", function (n) {
-    //       return n.source.iata_code == d.iata_code || n.target.iata_code == d.iata_code;
-    //   })
+      let checkbox = document.getElementById('checkboxTomCruise');
+      if (checkbox.checked){
+        d3.select('#usmap').append('g')
+          .attr('id', 'tomCruise-img')
+          .selectAll('#tomCruise')
+          .data(airportconnection)
+          .enter()
+          .append('svg:image')
+            .attr('id', 'tomCruise')
+            .attr('x', projection([d.lon, d.lat])[0] - 25)
+            .attr('y', projection([d.lon, d.lat])[1] - 25)
+            .style('opacity', 1)
+            .style('pointer-events', 'none')
+            .attr('width', 50)
+            .attr('height', 50)
+            .attr('xlink:href', 'https://pixel.nymag.com/imgs/daily/vulture/2017/06/14/14-tom-cruise.w700.h700.jpg')
+            .transition()
+            .duration(1000)
+            .delay((d,i) =>(i-1)*25)
+            .attr("x", function (a) {
+              let dest = airportsmap[a.Dest];
+              let end = dest == null ? projection([d.lon, d.lat])[0] : dest[0]
+              return end - 25;
+            })
+            .attr("y", function (a) {
+              let dest = airportsmap[a.Dest];
+              let end =  dest == null ? projection([d.lon, d.lat])[1] : dest[1]
+              return end - 25;
+            })
+            .transition()
+            .duration(100)
+            .delay(100)
+            .style('opacity', 0);
+        }
+      });
   }
 
   updateInfo(d) {
