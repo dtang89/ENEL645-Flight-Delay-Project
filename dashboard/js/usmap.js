@@ -1,6 +1,5 @@
 class Usmap{
   constructor(){
-
     this.offsetX = 0;
     this.offsetY = 0;
     this.mapWidth = 1600;
@@ -9,11 +8,9 @@ class Usmap{
     this.projection = d3.geoAlbersUsa()
       .translate([this.mapWidth / 2, this.mapHeight / 2])
       .scale([this.mapWidth * 1.36]);
-    
   }
 
   importData(airports) {
-
     this.airports = airports;
     this.airportsmap = {};
 
@@ -23,7 +20,8 @@ class Usmap{
         i--;
       }
       else {
-        this.airportsmap[this.airports[i].iata_code] = this.projection([this.airports[i].lon, this.airports[i].lat]);
+        this.airportsmap[this.airports[i].iata_code] = 
+          this.projection([this.airports[i].lon, this.airports[i].lat]);
       }
     }
   }
@@ -34,7 +32,8 @@ class Usmap{
     //Set map to be responsive
     let usmap = d3.select("#usmap")
       .attr("preserveAspectRatio", "xMinYMin meet")
-      .attr("viewBox", this.offsetX+" "+this.offsetY+" "+this.mapWidth+" "+this.mapHeight)
+      .attr("viewBox", 
+        this.offsetX+" "+this.offsetY+" "+this.mapWidth+" "+this.mapHeight);
 
     //draw map
     let path = d3.geoPath()
@@ -48,18 +47,19 @@ class Usmap{
         .data(json.features)
         .enter()
         .append("path")
-        .attr("d", path)
-        .attr("class", "mappath");
+          .attr("d", path)
+          .attr("class", "mappath");
     });
 
     //draw legend
     let linearSize = d3.scaleOrdinal()
       .domain(["Small Airport", "Medium Airport", "Large Airport"])
-      .range([2, 5, 15]);
+      .range([4, 8, 16]);
 
     let legendgroup = usmap.append("g")
       .attr("id", "maplegend")
-      .attr("transform", "translate("+ this.mapWidth * 0.87+","+ this.mapHeight * 0.7 +")");
+      .attr("transform", 
+        "translate("+ this.mapWidth * 0.87+","+ this.mapHeight * 0.7 +")");
 
     let legendSize = d3.legendSize()
       .scale(linearSize)
@@ -110,9 +110,12 @@ class Usmap{
     //draw spots
     let spotsGroup = usmap.append("g")
       .attr("id", "spots");
-    let spots = spotsGroup.selectAll("circle")
-      .data(airports);
-    spots.enter().append("circle")
+
+    spotsGroup
+      .selectAll("circle")
+      .data(airports)
+      .enter()
+      .append("circle")
       .attr("cx", function (d) {
         return projection([d.lon, d.lat])[0];
       })
@@ -120,9 +123,9 @@ class Usmap{
         return projection([d.lon, d.lat])[1];
       })
       .attr("r", function (d) {
-        if (d.type == "small_airport") return 2;
-        else if (d.type == "medium_airport") return 5;
-        else if (d.type == "large_airport") return 15;
+        if (d.type == "small_airport") return 4;
+        else if (d.type == "medium_airport") return 8;
+        else if (d.type == "large_airport") return 16;
         else return 0;
       })
       .attr("class", d => {return d.iata_code === 'IAH' ? 'spotIAH' : 'spot'})
@@ -135,7 +138,7 @@ class Usmap{
         updateSummary(d);
         let checkbox = document.getElementById('checkboxTomCruise');
         if (checkbox.checked){
-          let audio = new Audio('./audio/top-gun-quote.mp3');
+          let audio = new Audio('audio/top-gun-quote.mp3');
           audio.play();
         }
       });
@@ -144,12 +147,17 @@ class Usmap{
   clearRoutes() {
     d3.select("#routes").remove();
 
-    d3.select("#spots").selectAll("circle")
-        .attr("class", d => {return d.iata_code === 'IAH' ? 'spotIAH' : 'spot'});
-    d3.select("#force").selectAll("circle")
-        .attr("class", "forcenode")
-    d3.select("#force").selectAll("line")
-        .attr("class", "forcelink")
+    d3.select("#spots")
+      .selectAll("circle")
+      .attr("class", d => {return d.iata_code === 'IAH' ? 'spotIAH' : 'spot'});
+
+    d3.select("#force")
+      .selectAll("circle")
+      .attr("class", "forcenode");
+
+    d3.select("#force")
+      .selectAll("line")
+      .attr("class", "forcelink");
   }
 
   simulateClick(d, x) {
@@ -163,92 +171,115 @@ class Usmap{
     //remove class for all the spots
     d3.select("#spots").selectAll("circle")
       .attr("class", d => {return d.iata_code === 'IAH' ? 'spotIAH' : 'spot'});
-    d3.select("#force").selectAll("circle")
-      .attr("class", "forcenode")
 
     //set class for the selected spots on the map
     x.attr("class", "clicked");
 
     //set class for the selected spots on the other map
-    if (d.Count == null) {
-      d3.select("#force").selectAll("circle")
-        .classed("clicked", function (n) {
-          return n.iata_code == d.iata_code;
-        })
-    } else {
+    if (d.Count != null) {
       d3.select("#spots").selectAll("circle")
         .classed("clicked", function (n) {
           return n.iata_code == d.iata_code;
         })
-    }
+    } 
   }
 
   updateLine(d, projection, airportsmap) {
     d3.select("#routes").remove();
     d3.select('#tomCruise-img').remove();
 
-    let routesGroup = d3.select("#usmap").append("g")
+    let routesGroup = d3.select("#usmap")
+      .append("g")
       .attr("id", "routes");
 
     d3.csv("dataset/airportconnection.csv", function (connections) {
       let airportconnection = connections.filter(function (c) {
         return c.Origin == d.iata_code;
       });
+
       let routes = routesGroup.selectAll("line")
         .data(airportconnection);
+
+      let origin = projection([d.lon, d.lat]);
 
       routes
         .enter()
         .append('line')
-          .on('click', (a)=>{
-            let x = event.pageX,
-              y = event.pageY;
-            var dest = a.Dest === 'IAH' ? a.Origin : a.Dest;
-            d3.csv('dataset/new_summary.csv', function(summary){
+          .on('click', (a)=> {
+            let x = event.pageX, y = event.pageY;
+            var dest = (a.Dest === 'IAH' ? a.Origin : a.Dest);
+            d3.csv('dataset/flight_summary.csv', function(summary){
               let data = null;
+
               for (let i = 0; i < summary.length; i++) {
                 if (dest === summary[i].DEST) {
                   data = summary[i];
                   break;
                 }
               }
+
               d3.select('.route-tip')
                 .style('left', x+'px')
                 .style('top', y-50+'px')
                 .style('opacity', 0.8)
                 .html(`${data.ORIGIN} to ${data.DEST} has a 
                   ${parseFloat((1-data.ON_TIME/data.TOTAL)*100).toFixed(2)}
-                  % chance of being delayed!`
-                )
-                .transition()
-                .delay(2000)
-                .duration(1500)
+                  % chance of being delayed!`)
+                .transition().delay(2000).duration(1500)
                 .style('opacity',0);
             });
           })
           .style('pointer-events', 'all')
-          .attr("x1", function () {
-            return projection([d.lon, d.lat])[0];
+          .attr("x1", function (a) {
+            if (d.iata_code === 'IAH'){
+              return origin[0];
+            }
+
+            let dest = airportsmap[a.Dest];
+            return dest == null ? origin[0] : dest[0];
           })
-          .attr("y1", function () {
-              return projection([d.lon, d.lat])[1];
+          .attr("y1", function (a) {
+            if (d.iata_code === 'IAH'){
+              return origin[1];
+            }
+
+            let dest = airportsmap[a.Dest];
+            return dest == null ? origin[1] : dest[1];
           })
-          .attr("x2", function () {
-            return projection([d.lon, d.lat])[0];
+          .attr("x2", function (a) {
+            if (d.iata_code === 'IAH'){
+              return origin[0];
+            }
+
+            let dest = airportsmap[a.Dest];
+            return dest == null ? origin[0] : dest[0];
           })
-          .attr("y2", function () {
-            return projection([d.lon, d.lat])[1];
+          .attr("y2", function (a) {
+            if (d.iata_code === 'IAH'){
+              return origin[1];
+            }
+
+            let dest = airportsmap[a.Dest];
+            return dest == null ? origin[1] : dest[1];
           })
           .transition()
           .duration(1000)
           .delay((d,i)=>(i-1)*25)
           .attr("x2", function (a) {
-            let dest = airportsmap[a.Dest];
-            return dest == null ? projection([d.lon, d.lat])[0] : dest[0];
+            if (d.iata_code === 'IAH'){
+              let dest = airportsmap[a.Dest];
+              return dest == null ? origin[0] : dest[0];
+            }
+
+            return origin[0];
           })
           .attr("y2", function (a) {
-            let dest = airportsmap[a.Dest];
-            return dest == null ? projection([d.lon, d.lat])[1] : dest[1];
+            if (d.iata_code === 'IAH'){
+              let dest = airportsmap[a.Dest];
+              return dest == null ? origin[1] : dest[1];
+            }
+
+            return origin[1];
           })
           .attr("class", "route");
           
@@ -262,25 +293,45 @@ class Usmap{
           .enter()
           .append('svg:image')
             .attr('id', 'tomCruise')
-            .attr('x', projection([d.lon, d.lat])[0] - 25)
-            .attr('y', projection([d.lon, d.lat])[1] - 25)
-            .style('opacity', 1)
-            .style('pointer-events', 'none')
-            .attr('width', 50)
-            .attr('height', 50)
-            .attr('xlink:href', 'https://pixel.nymag.com/imgs/daily/vulture/2017/06/14/14-tom-cruise.w700.h700.jpg')
-            .transition()
-            .duration(1000)
-            .delay((d,i) =>(i-1)*25)
             .attr("x", function (a) {
+              if (d.iata_code === 'IAH'){
+                return origin[0] - 25;
+              }
               let dest = airportsmap[a.Dest];
               let end = dest == null ? projection([d.lon, d.lat])[0] : dest[0]
               return end - 25;
             })
             .attr("y", function (a) {
+              if (d.iata_code === 'IAH'){
+                return origin[1] - 25;
+              }
               let dest = airportsmap[a.Dest];
               let end =  dest == null ? projection([d.lon, d.lat])[1] : dest[1]
               return end - 25;
+            })
+            .style('opacity', 1)
+            .style('pointer-events', 'none')
+            .attr('width', 50)
+            .attr('height', 50)
+            .attr('xlink:href', 'img/tom-cruise.jpg')
+            .transition()
+            .duration(1000)
+            .delay((d,i) =>(i-1)*25)
+            .attr('x', function(a){
+              if (d.iata_code === 'IAH'){
+                let dest = airportsmap[a.Dest];
+                let end = dest == null ? projection([d.lon, d.lat])[0] : dest[0];
+                return end - 25;
+              }
+              return origin[0] - 25;
+            })
+            .attr('y', function(a){
+              if (d.iata_code === 'IAH'){
+                let dest = airportsmap[a.Dest];
+                let end = dest == null ? projection([d.lon, d.lat])[1] : dest[1];
+                return end - 25;
+              }
+              return origin[1] - 25;
             })
             .transition()
             .duration(100)
@@ -317,7 +368,7 @@ class Usmap{
     d3.select("#cardlist").selectAll(".litoberemoved").remove();
 
     //fetch the corresponding data from summary.csv regarding the iata_code
-    d3.csv("dataset/new_summary.csv", function (summary) {
+    d3.csv("dataset/flight_summary.csv", function (summary) {
       let data = null;
       for (let i = 0; i < summary.length; i++) {
         if (d.iata_code === summary[i].DEST) {
@@ -328,8 +379,9 @@ class Usmap{
       if (data == null) {
         return;
       }
+      let toOrFrom = d.iata_code === 'IAH' ? 'departed IAH' : 'arrived from IAH';
 
-      //annual flights
+      //total flights
       let count = d3.select("#cardlist").append("li")
         .attr("class", "list-group-item reducedpadding litoberemoved")
       count.append("span")
@@ -338,7 +390,15 @@ class Usmap{
       let countTable = count.append("table")
         .attr("class", 'inlinetable')
       countTable.append("tr").append("td")
-        .text(data.TOTAL+" (departure)");
+        .text(`${data.TOTAL} ${toOrFrom} (from 2010 to 2012)`);
+
+      let onTime = d3.select("#cardlist").append("li")
+        .attr("class", "list-group-item reducedpadding litoberemoved")
+        onTime.append("span")
+        .attr("class", "font-weight-bold")
+        .text("On-Time: ")
+        onTime.append("span")
+        .text((parseFloat(data.ON_TIME / data.TOTAL) * 100).toFixed(2)+"% (< 15 minutes)")
 
 
       //15min delay rate
@@ -346,11 +406,11 @@ class Usmap{
         .attr("class", "list-group-item reducedpadding litoberemoved")
       _15min.append("span")
         .attr("class", "font-weight-bold")
-        .text("15+ min Delay: ")
+        .text("Delayed: ")
       let _15minTable = _15min.append("table")
         .attr("class", 'inlinetable')
       _15minTable.append("tr").append("td")
-        .text((parseFloat(data.DELAYED15MIN / data.TOTAL) * 100).toFixed(2)+"% (departure)");
+        .text((parseFloat(data.DELAYED15MIN / data.TOTAL) * 100).toFixed(2)+"% (15+ minutes)");
 
       //cancel rate
       let cancel = d3.select("#cardlist").append("li")
@@ -361,6 +421,15 @@ class Usmap{
       cancel.append("span")
         .text((parseFloat(data.CANCELLED / data.TOTAL) * 100).toFixed(2)+"%")
 
+      //diversion rate
+      let diverted = d3.select("#cardlist").append("li")
+        .attr("class", "list-group-item reducedpadding litoberemoved")
+      diverted.append("span")
+        .attr("class", "font-weight-bold")
+        .text("Diverted: ")
+      diverted.append("span")
+        .text((parseFloat(data.DIVERTED / data.TOTAL) * 100).toFixed(2)+"%")
+
       //cause of delay
       let cause = d3.select("#cardlist").append("li")
         .attr("class", "list-group-item reducedpadding litoberemoved")
@@ -369,9 +438,9 @@ class Usmap{
         .text("Delay Types:")
 
       let dataset = [
-          {legend: "Delayed 15+ min", value: data.DELAYED15MIN},
-          {legend: "Diverted", value: data.DIVERTED},
-          {legend: "Cancelled", value: data.CANCELLED},
+        {legend: "Delayed 15+ min", value: data.DELAYED15MIN},
+        {legend: "Diverted", value: data.DIVERTED},
+        {legend: "Cancelled", value: data.CANCELLED},
       ];
 
       let width = 400;
@@ -406,9 +475,7 @@ class Usmap{
 
       let pie = d3.pie()
         .sort(null)
-        .value(function (d) {
-            return d.value;
-        });
+        .value(d => d.value);
 
       let groups = chartgroup.selectAll("g")
         .data(pie(dataset))

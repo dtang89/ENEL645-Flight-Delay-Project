@@ -3,10 +3,11 @@ data_processing/r1AllFlights.csv
 data_processing/.ipy
 .*/
 dashboard/frontend/*.csv
-.ipynb_checkpoints/
+.ipynb_checkpoints
 logs/
 *.csv
 __pycache__
 !*/dataset/*
 !*/dataset/stats/*
 *old_data
+*/dataset/.ipynb_checkpoints
