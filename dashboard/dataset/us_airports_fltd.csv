@@ -1,0 +1,120 @@
+,iata_code,type,name,lat,lon,elevation_ft,iso_region,municipality,icao_code,home_link,wikipedia_link
+0,ABQ,large_airport,Albuquerque International Sunport Airport,35.040199,-106.609001,5355.0,US-NM,Albuquerque,KABQ,http://www.abqsunport.com/,http://en.wikipedia.org/wiki/Albuquerque_International_Sunport
+3,AGS,large_airport,Augusta Regional At Bush Field,33.36989975,-81.96450043,144.0,US-GA,Augusta,KAGS,,http://en.wikipedia.org/wiki/Augusta_Regional_Airport
+4,AMA,large_airport,Rick Husband Amarillo International Airport,35.219398,-101.706001,3607.0,US-TX,Amarillo,KAMA,http://airport.amarillo.gov/,http://en.wikipedia.org/wiki/Rick_Husband_Amarillo_International_Airport
+5,ATL,large_airport,Hartsfield Jackson Atlanta International Airport,33.63669968,-84.42810059,1026.0,US-GA,Atlanta,KATL,http://www.atlanta-airport.com/,http://en.wikipedia.org/wiki/Hartsfield-Jackson_Atlanta_International_Airport
+6,AUS,large_airport,Austin Bergstrom International Airport,30.19449997,-97.66989899,542.0,US-TX,Austin,KAUS,http://www.ci.austin.tx.us/austinairport/,http://en.wikipedia.org/wiki/Austin-Bergstrom_International_Airport
+7,AVL,large_airport,Asheville Regional Airport,35.43619919,-82.54180145,2165.0,US-NC,Asheville,KAVL,,http://en.wikipedia.org/wiki/Asheville_Regional_Airport
+13,BHM,large_airport,Birmingham-Shuttlesworth International Airport,33.56290054,-86.75350189,650.0,US-AL,Birmingham,KBHM,http://www.flybirmingham.com/,http://en.wikipedia.org/wiki/Birmingham_International_Airport_(US)
+17,BNA,large_airport,Nashville International Airport,36.12450027,-86.67819977,599.0,US-TN,Nashville,KBNA,,http://en.wikipedia.org/wiki/Nashville_International_Airport
+19,BOS,large_airport,General Edward Lawrence Logan International Airport,42.36429977,-71.00520325,20.0,US-MA,Boston,KBOS,http://www.massport.com/logan/,http://en.wikipedia.org/wiki/Logan_International_Airport
+20,BTR,large_airport,"Baton Rouge Metropolitan, Ryan Field",30.53319931,-91.14959717,70.0,US-LA,Baton Rouge,KBTR,,http://en.wikipedia.org/wiki/Baton_Rouge_Metropolitan_Airport
+22,BWI,large_airport,Baltimore/Washington International Thurgood Marshall Airport,39.17539978,-76.66829681,146.0,US-MD,Baltimore,KBWI,,http://en.wikipedia.org/wiki/Baltimore-Washington_International_Thurgood_Marshall_Airport
+23,CAE,large_airport,Columbia Metropolitan Airport,33.93880081,-81.11949921,236.0,US-SC,Columbia,KCAE,,http://en.wikipedia.org/wiki/Columbia_Metropolitan_Airport
+26,CHS,large_airport,Charleston Air Force Base-International Airport,32.89860153,-80.04049683,46.0,US-SC,Charleston,KCHS,,http://en.wikipedia.org/wiki/Charleston_International_Airport
+27,CID,large_airport,The Eastern Iowa Airport,41.88470078,-91.71080017,869.0,US-IA,Cedar Rapids,KCID,,http://en.wikipedia.org/wiki/The_Eastern_Iowa_Airport
+28,CLE,large_airport,Cleveland Hopkins International Airport,41.4117012,-81.84980011,791.0,US-OH,Cleveland,KCLE,http://www.clevelandairport.com/,http://en.wikipedia.org/wiki/Cleveland_Hopkins_International_Airport
+29,CLT,large_airport,Charlotte Douglas International Airport,35.21400070000001,-80.94309998,748.0,US-NC,Charlotte,KCLT,http://www.charlotteairport.com/,http://en.wikipedia.org/wiki/Charlotte/Douglas_International_Airport
+30,CMH,large_airport,Port Columbus International Airport,39.9980011,-82.89189911,815.0,US-OH,Columbus,KCMH,,http://en.wikipedia.org/wiki/Port_Columbus_International_Airport
+31,COS,large_airport,City of Colorado Springs Municipal Airport,38.80580139,-104.70099640000001,6187.0,US-CO,Colorado Springs,KCOS,https://flycos.coloradosprings.gov/,http://en.wikipedia.org/wiki/Colorado_Springs_Airport
+33,CRP,large_airport,Corpus Christi International Airport,27.77039909,-97.50119781,44.0,US-TX,Corpus Christi,KCRP,,http://en.wikipedia.org/wiki/Corpus_Christi_International_Airport
+34,CRW,large_airport,Yeager Airport,38.37310028,-81.59320068,981.0,US-WV,Charleston,KCRW,,http://en.wikipedia.org/wiki/Yeager_Airport
+35,CVG,large_airport,Cincinnati Northern Kentucky International Airport,39.04880142,-84.6678009,896.0,US-KY,Cincinnati,KCVG,,http://en.wikipedia.org/wiki/Cincinnati/Northern_Kentucky_International_Airport
+38,DAL,large_airport,Dallas Love Field,32.847099,-96.851799,487.0,US-TX,Dallas,KDAL,http://www.dallas-lovefield.com/,http://en.wikipedia.org/wiki/Dallas_Love_Field
+39,DAY,large_airport,James M Cox Dayton International Airport,39.90240097,-84.2193985,1009.0,US-OH,Dayton,KDAY,,http://en.wikipedia.org/wiki/Dayton_International_Airport
+41,DCA,large_airport,Ronald Reagan Washington National Airport,38.8521,-77.037697,15.0,US-DC,Washington,KDCA,http://www.flyreagan.com/dca/reagan-national-airport,http://en.wikipedia.org/wiki/Ronald_Reagan_Washington_National_Airport
+42,DEN,large_airport,Denver International Airport,39.86169815,-104.6729965,5431.0,US-CO,Denver,KDEN,http://www.flydenver.com/,http://en.wikipedia.org/wiki/Denver_International_Airport
+43,DFW,large_airport,Dallas Fort Worth International Airport,32.89680099,-97.03800201,607.0,US-TX,Dallas-Fort Worth,KDFW,http://www.dfwairport.com/,http://en.wikipedia.org/wiki/Dallas-Fort_Worth_International_Airport
+47,DSM,large_airport,Des Moines International Airport,41.5340004,-93.6631012,958.0,US-IA,Des Moines,KDSM,,http://en.wikipedia.org/wiki/Des_Moines_International_Airport
+48,DTW,large_airport,Detroit Metropolitan Wayne County Airport,42.21239853,-83.35340118,645.0,US-MI,Detroit,KDTW,http://www.metroairport.com/,http://en.wikipedia.org/wiki/Detroit_Metropolitan_Wayne_County_Airport
+53,EWR,large_airport,Newark Liberty International Airport,40.69250107,-74.16870117,18.0,US-NJ,Newark,KEWR,http://www.panynj.gov/CommutingTravel/airports/html/newarkliberty.html,http://en.wikipedia.org/wiki/Newark_Liberty_International_Airport
+55,FLL,large_airport,Fort Lauderdale Hollywood International Airport,26.07259941,-80.15270233,9.0,US-FL,Fort Lauderdale,KFLL,http://www.fll.net/,http://en.wikipedia.org/wiki/Fort_Lauderdale-Hollywood_International_Airport
+60,GPT,large_airport,Gulfport Biloxi International Airport,30.40730095,-89.07009888,28.0,US-MS,Gulfport,KGPT,,http://en.wikipedia.org/wiki/Gulfport-Biloxi_International_Airport
+63,GSO,large_airport,Piedmont Triad International Airport,36.09780121,-79.93730164,925.0,US-NC,Greensboro,KGSO,,http://en.wikipedia.org/wiki/Piedmont_Triad_International_Airport
+64,GSP,large_airport,Greenville Spartanburg International Airport,34.89569855,-82.21890259,964.0,US-SC,Greenville,KGSP,,http://en.wikipedia.org/wiki/Greenville-Spartanburg_International_Airport
+69,HSV,large_airport,Huntsville International Carl T Jones Field,34.6371994,-86.77510071,629.0,US-AL,Huntsville,KHSV,http://www.flyhuntsville.com/portal/#.VbaG-_lVhBc,http://en.wikipedia.org/wiki/Huntsville_International_Airport
+71,IAD,large_airport,Washington Dulles International Airport,38.94449997,-77.45580292,312.0,US-DC,Washington,KIAD,http://www.mwaa.com/dulles/,http://en.wikipedia.org/wiki/Washington_Dulles_International_Airport
+72,IAH,large_airport,George Bush Intercontinental Houston Airport,29.984399800000002,-95.34140015,97.0,US-TX,Houston,KIAH,http://www.fly2houston.com/iah,http://en.wikipedia.org/wiki/George_Bush_Intercontinental_Airport
+73,ICT,large_airport,Wichita Mid Continent Airport,37.64989853,-97.43309784,1333.0,US-KS,Wichita,KICT,,http://en.wikipedia.org/wiki/Kansas_City_International_Airport
+74,IND,large_airport,Indianapolis International Airport,39.7173,-86.294403,797.0,US-IN,Indianapolis,KIND,http://www.indianapolisairport.com/,http://en.wikipedia.org/wiki/Indianapolis_International_Airport
+75,JAN,large_airport,Jackson-Medgar Wiley Evers International Airport,32.31119919,-90.07589722,346.0,US-MS,Jackson,KJAN,,http://en.wikipedia.org/wiki/Jackson-Evers_International_Airport
+76,JAX,large_airport,Jacksonville International Airport,30.49410057,-81.68789673,30.0,US-FL,Jacksonville,KJAX,,http://en.wikipedia.org/wiki/Jacksonville_International_Airport
+77,JFK,large_airport,John F Kennedy International Airport,40.63980103,-73.77890015,13.0,US-NY,New York,KJFK,http://www.panynj.gov/CommutingTravel/airports/html/kennedy.html,http://en.wikipedia.org/wiki/John_F._Kennedy_International_Airport
+79,LAS,large_airport,McCarran International Airport,36.08010101,-115.15200039999999,2181.0,US-NV,Las Vegas,KLAS,http://www.mccarran.com/,http://en.wikipedia.org/wiki/McCarran_International_Airport
+80,LAX,large_airport,Los Angeles International Airport,33.94250107,-118.40799709999999,125.0,US-CA,Los Angeles,KLAX,http://www.iflylax.com/,http://en.wikipedia.org/wiki/Los_Angeles_International_Airport
+81,LBB,large_airport,Lubbock Preston Smith International Airport,33.663601,-101.822998,3282.0,US-TX,Lubbock,KLBB,http://www.flylia.com/,http://en.wikipedia.org/wiki/Lubbock_Preston_Smith_International_Airport
+83,LEX,large_airport,Blue Grass Airport,38.03649902,-84.60590363,979.0,US-KY,Lexington,KLEX,http://www.bluegrassairport.com/,http://en.wikipedia.org/wiki/Blue_Grass_Airport
+85,LFT,large_airport,Lafayette Regional Airport,30.20529938,-91.98760223,42.0,US-LA,Lafayette,KLFT,http://www.lftairport.com/Home,http://en.wikipedia.org/wiki/Lafayette_Regional_Airport
+86,LGA,large_airport,La Guardia Airport,40.77719879,-73.87259674,21.0,US-NY,New York,KLGA,http://www.panynj.gov/CommutingTravel/airports/html/laguardia.html,http://en.wikipedia.org/wiki/LaGuardia_Airport
+87,LIT,large_airport,Bill & Hillary Clinton National Airport/Adams Field,34.72940063,-92.22429657,262.0,US-AR,Little Rock,KLIT,,http://en.wikipedia.org/wiki/Little_Rock_National_Airport
+92,MCI,large_airport,Kansas City International Airport,39.2976,-94.713898,1026.0,US-MO,Kansas City,KMCI,http://www.flykci.com/,https://en.wikipedia.org/wiki/Kansas_City_International_Airport
+93,MCO,large_airport,Orlando International Airport,28.42939949,-81.30899811,96.0,US-FL,Orlando,KMCO,http://www.orlandoairports.net/,http://en.wikipedia.org/wiki/Orlando_International_Airport
+95,MEM,large_airport,Memphis International Airport,35.04240036,-89.97669983,341.0,US-TN,Memphis,KMEM,,http://en.wikipedia.org/wiki/Memphis_International_Airport
+99,MIA,large_airport,Miami International Airport,25.79319954,-80.29060364,8.0,US-FL,Miami,KMIA,http://www.miami-airport.com/,http://en.wikipedia.org/wiki/Miami_International_Airport
+100,MKE,large_airport,General Mitchell International Airport,42.94720078,-87.89659882,723.0,US-WI,Milwaukee,KMKE,,http://en.wikipedia.org/wiki/General_Mitchell_International_Airport
+102,MLU,large_airport,Monroe Regional Airport,32.51089859,-92.03769684,79.0,US-LA,Monroe,KMLU,,http://en.wikipedia.org/wiki/Monroe_Regional_Airport
+103,MOB,large_airport,Mobile Regional Airport,30.69120026,-88.24279785,219.0,US-AL,Mobile,KMOB,http://www.mobairport.com/,http://en.wikipedia.org/wiki/Mobile_Regional_Airport
+105,MSP,large_airport,Minneapolis-St Paul International/Wold-Chamberlain Airport,44.88199997,-93.22180176,841.0,US-MN,Minneapolis,KMSP,http://www.mspairport.com/,http://en.wikipedia.org/wiki/Minneapolis-Saint_Paul_International_Airport
+106,MSY,large_airport,Louis Armstrong New Orleans International Airport,29.99340057,-90.25800323,4.0,US-LA,New Orleans,KMSY,,http://en.wikipedia.org/wiki/Louis_Armstrong_New_Orleans_International_Airport
+109,OKC,large_airport,Will Rogers World Airport,35.39310074,-97.60070038,1295.0,US-OK,Oklahoma City,KOKC,,http://en.wikipedia.org/wiki/Will_Rogers_World_Airport
+110,ONT,large_airport,Ontario International Airport,34.05599976,-117.60099790000001,944.0,US-CA,Ontario,KONT,,http://en.wikipedia.org/wiki/LA/Ontario_International_Airport
+111,ORD,large_airport,Chicago O'Hare International Airport,41.97859955,-87.90480042,672.0,US-IL,Chicago,KORD,http://www.flychicago.com/ohare/en/home/Pages/default.aspx,http://en.wikipedia.org/wiki/O'Hare_International_Airport
+112,ORF,large_airport,Norfolk International Airport,36.89459991,-76.20120239,26.0,US-VA,Norfolk,KORF,,http://en.wikipedia.org/wiki/Norfolk_International_Airport
+114,PBI,large_airport,Palm Beach International Airport,26.68320084,-80.09559631,19.0,US-FL,West Palm Beach,KPBI,,http://en.wikipedia.org/wiki/Palm_Beach_International_Airport
+115,PDX,large_airport,Portland International Airport,45.58869934,-122.59799960000001,31.0,US-OR,Portland,KPDX,,http://en.wikipedia.org/wiki/Portland_International_Airport
+117,PHL,large_airport,Philadelphia International Airport,39.87189865,-75.2410965,36.0,US-PA,Philadelphia,KPHL,http://www.phl.org/,http://en.wikipedia.org/wiki/Philadelphia_International_Airport
+118,PHX,large_airport,Phoenix Sky Harbor International Airport,33.43429947,-112.012001,1135.0,US-AZ,Phoenix,KPHX,http://phoenix.gov/skyharborairport/,http://en.wikipedia.org/wiki/Phoenix_Sky_Harbor_International_Airport
+120,PIT,large_airport,Pittsburgh International Airport,40.49150085,-80.23290253,1203.0,US-PA,Pittsburgh,KPIT,,http://en.wikipedia.org/wiki/Pittsburgh_International_Airport
+122,RDU,large_airport,Raleigh Durham International Airport,35.87760162,-78.78749847,435.0,US-NC,Raleigh/Durham,KRDU,,http://en.wikipedia.org/wiki/Raleigh-Durham_International_Airport
+124,RIC,large_airport,Richmond International Airport,37.50519943,-77.31970215,167.0,US-VA,Richmond,KRIC,,http://en.wikipedia.org/wiki/Richmond_International_Airport
+126,RNO,large_airport,Reno Tahoe International Airport,39.49909973,-119.7679977,4415.0,US-NV,Reno,KRNO,,http://en.wikipedia.org/wiki/Reno-Tahoe_International_Airport
+130,RSW,large_airport,Southwest Florida International Airport,26.53619957,-81.75520325,30.0,US-FL,Fort Myers,KRSW,http://www.flylcpa.com/,http://en.wikipedia.org/wiki/Southwest_Florida_International_Airport
+131,SAN,large_airport,San Diego International Airport,32.73360062,-117.1900024,17.0,US-CA,San Diego,KSAN,http://www.san.org/,http://en.wikipedia.org/wiki/San_Diego_International_Airport
+132,SAT,large_airport,San Antonio International Airport,29.53370094,-98.46980286,809.0,US-TX,San Antonio,KSAT,,http://en.wikipedia.org/wiki/San_Antonio_International_Airport
+133,SAV,large_airport,Savannah Hilton Head International Airport,32.12760162,-81.20210266,50.0,US-GA,Savannah,KSAV,,http://en.wikipedia.org/wiki/Savannah/Hilton_Head_International_Airport
+135,SDF,large_airport,Louisville International Standiford Field,38.1744,-85.736,501.0,US-KY,Louisville,KSDF,http://www.flylouisville.com,http://en.wikipedia.org/wiki/Louisville_International_Airport
+136,SEA,large_airport,Seattle Tacoma International Airport,47.44900131,-122.3089981,433.0,US-WA,Seattle,KSEA,http://www.portseattle.org/seatac/,http://en.wikipedia.org/wiki/Seattle-Tacoma_International_Airport
+138,SFO,large_airport,San Francisco International Airport,37.61899948,-122.375,13.0,US-CA,San Francisco,KSFO,http://www.flysfo.com/,http://en.wikipedia.org/wiki/San_Francisco_International_Airport
+140,SHV,large_airport,Shreveport Regional Airport,32.44660187,-93.82559967,258.0,US-LA,Shreveport,KSHV,,http://en.wikipedia.org/wiki/Shreveport_Regional_Airport
+141,SJC,large_airport,Norman Y. Mineta San Jose International Airport,37.362598,-121.929001,62.0,US-CA,San Jose,KSJC,http://www.flysanjose.com/,http://en.wikipedia.org/wiki/San_Jose_International_Airport
+143,SLC,large_airport,Salt Lake City International Airport,40.78839874,-111.97799679999999,4227.0,US-UT,Salt Lake City,KSLC,,http://en.wikipedia.org/wiki/Salt_Lake_City_International_Airport
+144,SMF,large_airport,Sacramento International Airport,38.69540024,-121.5910034,27.0,US-CA,Sacramento,KSMF,,http://en.wikipedia.org/wiki/Sacramento_International_Airport
+145,SNA,large_airport,John Wayne Airport-Orange County Airport,33.67570114,-117.86799620000001,56.0,US-CA,Santa Ana,KSNA,http://www.ocair.com/,http://en.wikipedia.org/wiki/John_Wayne_Airport
+150,STL,large_airport,St Louis Lambert International Airport,38.748697,-90.370003,618.0,US-MO,St Louis,KSTL,http://www.lambert-stlouis.com/,http://en.wikipedia.org/wiki/Lambert-St._Louis_International_Airport
+160,TPA,large_airport,Tampa International Airport,27.97550011,-82.53320313,26.0,US-FL,Tampa,KTPA,,http://en.wikipedia.org/wiki/Tampa_International_Airport
+162,TUL,large_airport,Tulsa International Airport,36.19839859,-95.88809967,677.0,US-OK,Tulsa,KTUL,,http://en.wikipedia.org/wiki/Tulsa_International_Airport
+163,TUS,large_airport,Tucson International Airport,32.11610031,-110.9410019,2643.0,US-AZ,Tucson,KTUS,,http://en.wikipedia.org/wiki/Tucson_International_Airport
+164,TYS,large_airport,McGhee Tyson Airport,35.81100082,-83.99400329999999,981.0,US-TN,Knoxville,KTYS,,http://en.wikipedia.org/wiki/McGhee_Tyson_Airport
+166,VPS,large_airport,Destin-Ft Walton Beach Airport,30.4832,-86.525398,87.0,US-FL,Valparaiso,KVPS,http://www.flyvps.com/,https://en.wikipedia.org/wiki/Destin%E2%80%93Fort_Walton_Beach_Airport
+169,ANC,large_airport,Ted Stevens Anchorage International Airport,61.17440033,-149.9960022,152.0,US-AK,Anchorage,PANC,,http://en.wikipedia.org/wiki/Ted_Stevens_Anchorage_International_Airport
+170,HNL,large_airport,Daniel K Inouye International Airport,21.32062,-157.924228,13.0,US-HI,Honolulu,PHNL,http://hawaii.gov/dot/airports/hnl/,http://en.wikipedia.org/wiki/Honolulu_International_Airport
+177,ACT,medium_airport,Waco Regional Airport,31.61129951,-97.23049927,516.0,US-TX,Waco,KACT,,http://en.wikipedia.org/wiki/Waco_Regional_Airport
+180,AEX,medium_airport,Alexandria International Airport,31.32740021,-92.54979706,89.0,US-LA,Alexandria,KAEX,,http://en.wikipedia.org/wiki/Alexandria_International_Airport
+200,ASE,medium_airport,Aspen-Pitkin Co/Sardy Field,39.22320175,-106.8690033,7820.0,US-CO,Aspen,KASE,http://aspenairport.com/,http://en.wikipedia.org/wiki/Aspen%E2%80%93Pitkin_County_Airport
+217,BFL,medium_airport,Meadows Field,35.43360138,-119.0569992,510.0,US-CA,Bakersfield,KBFL,,http://en.wikipedia.org/wiki/Meadows_Field_Airport
+238,BPT,medium_airport,Southeast Texas Regional Airport,29.95079994,-94.02069855,15.0,US-TX,Beaumont/Port Arthur,KBPT,,http://en.wikipedia.org/wiki/Southeast_Texas_Regional_Airport
+242,BRO,medium_airport,Brownsville South Padre Island International Airport,25.90679932,-97.42590332,22.0,US-TX,Brownsville,KBRO,,http://en.wikipedia.org/wiki/Brownsville/South_Padre_Island_International_Airport
+268,CLL,medium_airport,Easterwood Field,30.58860016,-96.36380005,320.0,US-TX,College Station,KCLL,,http://en.wikipedia.org/wiki/Easterwood_Airport
+306,DRT,medium_airport,Del Rio International Airport,29.37420082,-100.927002,1002.0,US-TX,Del Rio,KDRT,http://www.cityofdelrio.com/index.aspx?NID=412,http://en.wikipedia.org/wiki/Del_Rio_International_Airport
+316,EGE,medium_airport,Eagle County Regional Airport,39.64260101,-106.9179993,6548.0,US-CO,Eagle,KEGE,http://www.eaglecounty.us/airport/,http://en.wikipedia.org/wiki/Eagle_County_Regional_Airport
+324,ELP,medium_airport,El Paso International Airport,31.80719948,-106.37799840000002,3959.0,US-TX,El Paso,KELP,,http://en.wikipedia.org/wiki/El_Paso_International_Airport
+370,GJT,medium_airport,Grand Junction Regional Airport,39.12239838,-108.52700039999999,4858.0,US-CO,Grand Junction,KGJT,http://www.gjairport.com/,http://en.wikipedia.org/wiki/Grand_Junction_Regional_Airport
+380,GRK,medium_airport,Robert Gray  Army Air Field Airport,31.06719971,-97.8289032,1015.0,US-TX,Fort Hood/Killeen,KGRK,,http://en.wikipedia.org/wiki/Killeen-Fort_Hood_Regional_Airport
+381,GRR,medium_airport,Gerald R. Ford International Airport,42.88079834,-85.52279663,794.0,US-MI,Grand Rapids,KGRR,,http://en.wikipedia.org/wiki/Gerald_R._Ford_International_Airport
+399,HOB,medium_airport,Lea County Regional Airport,32.6875,-103.21700290000001,3661.0,US-NM,Hobbs,KHOB,,http://en.wikipedia.org/wiki/Lea_County_Regional_Airport
+405,HRL,medium_airport,Valley International Airport,26.22850037,-97.65440369,36.0,US-TX,Harlingen,KHRL,,http://en.wikipedia.org/wiki/Valley_International_Airport
+437,JAC,medium_airport,Jackson Hole Airport,43.6072998,-110.737999,6451.0,US-WY,Jackson,KJAC,,http://en.wikipedia.org/wiki/Jackson_Hole_Airport
+455,LCH,medium_airport,Lake Charles Regional Airport,30.12610054,-93.22329712,15.0,US-LA,Lake Charles,KLCH,,http://en.wikipedia.org/wiki/Lake_Charles_Regional_Airport
+468,LRD,medium_airport,Laredo International Airport,27.54380035,-99.46160126,508.0,US-TX,Laredo,KLRD,,http://en.wikipedia.org/wiki/Laredo_International_Airport
+482,MAF,medium_airport,Midland International Airport,31.94249916,-102.2020035,2871.0,US-TX,Midland,KMAF,,http://en.wikipedia.org/wiki/Midland_International_Airport
+495,MFE,medium_airport,Mc Allen Miller International Airport,26.17580032,-98.23860168,107.0,US-TX,Mc Allen,KMFE,,http://en.wikipedia.org/wiki/McAllen-Miller_International_Airport
+517,MTJ,medium_airport,Montrose Regional Airport,38.50979996,-107.8939972,5759.0,US-CO,Montrose,KMTJ,,
+520,MYR,medium_airport,Myrtle Beach International Airport,33.67969894,-78.92829895,25.0,US-SC,Myrtle Beach,KMYR,,http://en.wikipedia.org/wiki/Myrtle_Beach_International_Airport
+546,OMA,medium_airport,Eppley Airfield,41.30319977,-95.89409637,984.0,US-NE,Omaha,KOMA,,http://en.wikipedia.org/wiki/Eppley_Airfield
+575,PNS,medium_airport,Pensacola Regional Airport,30.47340012,-87.18659973,121.0,US-FL,Pensacola,KPNS,http://www.flypensacola.com/,http://en.wikipedia.org/wiki/Pensacola_Regional_Airport
+585,PSP,medium_airport,Palm Springs International Airport,33.82970047,-116.50700379999999,477.0,US-CA,Palm Springs,KPSP,http://www.palmspringsca.gov/index.aspx?page=270,http://en.wikipedia.org/wiki/Palm_Springs_International_Airport
+593,RAP,medium_airport,Rapid City Regional Airport,44.04529953,-103.0569992,3204.0,US-SD,Rapid City,KRAP,,http://en.wikipedia.org/wiki/Rapid_City_Regional_Airport
+671,TYR,medium_airport,Tyler Pounds Regional Airport,32.35409927,-95.40239716,544.0,US-TX,Tyler,KTYR,,http://en.wikipedia.org/wiki/Tyler_Pounds_Regional_Airport
+694,XNA,medium_airport,Northwest Arkansas Regional Airport,36.281898,-94.30680100000001,1287.0,US-AR,Fayetteville/Springdale,KXNA,http://www.flyxna.com/,https://en.wikipedia.org/wiki/Northwest_Arkansas_Regional_Airport
+1251,GUC,small_airport,Gunnison Crested Butte Regional Airport,38.53390121,-106.9329987,7680.0,US-CO,Gunnison,KGUC,,http://en.wikipedia.org/wiki/Gunnison-Crested_Butte_Regional_Airport
+1266,HDN,small_airport,Yampa Valley Airport,40.48120117,-107.21800230000001,6606.0,US-CO,Hayden,KHDN,,http://en.wikipedia.org/wiki/Yampa_Valley_Airport

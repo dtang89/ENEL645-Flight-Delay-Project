@@ -1,11 +1,12 @@
-<<<<<<< HEAD
 data/*
 data_processing/r1AllFlights.csv
 data_processing/.ipy
 .*/
-=======
-# Don't track these folders
+dashboard/frontend/*.csv
 .ipynb_checkpoints/
 logs/
-
->>>>>>> 0be3fec9969a0d7cb5aabaef50903580aae36466
+*.csv
+__pycache__
+!*/dataset/*
+!*/dataset/stats/*
+*old_data

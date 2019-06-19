@@ -1,16 +1,93 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
+<html lang="en">
 
-<html>
-	<header>
-		<link rel="stylesheet" href="./css/style.css">
-		<script src="./lib/d3.v5.min.js"></script>
-		<script src="./lib/topojson.v2.min.js"></script>
-	</header>
-	<body>
-		<div id="map"></div>
-	</body>
-	<footer>
-		<script src="./js/map.js"></script>
-	</footer>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Visualization for Flight On-time Performance of the United States</title>
+    <link rel="icon" href="img/icon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+        integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="./lib/d3.v4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.24.0/d3-legend.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+    <script src="./lib/tip.js"></script>
+    <script src="./lib/geopoint.js"></script>
+    <script src="./js/usmap.js"></script>
+    <script src="./js/script.js"></script>
+</head>
+
+<body>
+    <div class="div-container">
+        <h3>Visualization of Flight's Departing from IAH from 2010-2012</h3>
+        <hr>
+        <div class="row">
+            <div id="mapdiv" class="col-xl-9">
+                <div class="row minuspadding">
+                    <div class="col-lg-6">
+                        <button id="clearmap" type="button" class="btn btn-light btn-sm" onclick="clearMap()">
+                            Clear Map
+                        </button>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon">Search</span>
+                            <input id="keyword" type="text" class="form-control" placeholder="IATA, ICAO or City Name"
+                                onkeyup="enterHit(event)">
+                            <span class="input-group-btn">
+                                <button class="btn btn-info" type="button" onclick="searchAirport()">Go!</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div id="force" style="visibility: hidden; height: 0"></div>
+                <div id="nonforce">
+                    <svg id="usmap"></svg>
+                </div>
+            </div>
+            <div id="paneldiv" class="col-xl-3 card panel panelbefore">
+                <div id="carddiv">
+                    <div class="card-body reducedpadding">
+                        <h4 id="card_title" class="card-title"></h4>
+                        <h6 id="card_code" class="card-title"></h6>
+                    </div>
+                    <ul id="cardlist" class="list-group list-group-flush reducefontsize">
+                        <li class="list-group-item reducedpadding">
+                            <span class="font-weight-bold">Municipality: </span><span id="card_municipality"></span>
+                        </li>
+                        <li class="list-group-item reducedpadding">
+                            <span class="font-weight-bold">Coordinate: </span>
+                            <table class="inlinetable">
+                                <tr>
+                                    <td id="card_longitude"></td>
+                                </tr>
+                                <tr>
+                                    <td id="card_latitude"></td>
+                                </tr>
+                            </table>
+                        </li>
+                        <li class="list-group-item reducedpadding">
+                            <span class="font-weight-bold">Elevation: </span><span id="card_elevation"></span>
+                        </li>
+                    </ul>
+                </div>
+                <div id="piediv" class="pie">
+                    <svg id="piechart"></svg>
+                </div>
+            </div>
+        </div>
+        <div id="hrdiv"></div>
+        <hr>
+    </div>
+</body>
+
 </html>
